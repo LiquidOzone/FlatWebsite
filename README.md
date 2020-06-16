@@ -1,0 +1,2 @@
+# FlatWebsite
+A website template
