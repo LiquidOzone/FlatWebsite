@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,66 +10,108 @@ html {
   font-size: 62.5%;
 }
 
-a {
-  text-decoration: none;
-  color: black;
-}
-
-li {
-  list-style: none;
-}
-
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand", sans-serif;
+}
+
+h1 {
+  font-size: 2.6rem;
+}
+
+li,
+button,
+label,
+input,
+p {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 4.8rem;
+}
+
+h3 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+h4,
+h5 {
+  font-size: 2.8rem;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+button {
+  border-radius: 2rem;
+  padding: 2rem 6rem;
+  background: rgba(76, 75, 49, 0.87);
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  -webkit-transition: background 0.5s ease-in-out;
+  transition: background 0.5s ease-in-out;
+}
+
+/* Nav Section With HERO */
+.main-head {
+  background: #b88f7e;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0px;
+  z-index: 3;
 }
 
 nav {
-  padding: 2rem 0rem;
-  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 90%;
+  margin: auto;
+  padding: 2rem;
   min-height: 10vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-}
-
-nav > ul, #logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-nav > ul {
   -webkit-box-flex: 1;
       -ms-flex: 1 1 40rem;
           flex: 1 1 40rem;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-right: 9rem;
-  font-size: 1.3rem;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
 }
 
-nav > #logo {
+#logo {
   -webkit-box-flex: 2;
       -ms-flex: 2 1 40rem;
           flex: 2 1 40rem;
-  padding-left: 9rem;
-  font-family: 'Pacifico', cursive;
-  font-size: 1.5rem;
-}
-
-main {
-  background: url("/liana-mikah-L5cEmk3ucYY-unsplash.jpg") no-repeat center center fixed;
-  background-size: cover;
-  background-position: center;
-  min-height: 100vh;
+  font-family: "Pacifico", sans-serif;
+  font-weight: 400;
 }
 
 .hero {
   min-height: 90vh;
-}
-
-.hero {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), to(transparent)), url("/liana-mikah-L5cEmk3ucYY-unsplash.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.4), transparent), url("/liana-mikah-L5cEmk3ucYY-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -76,38 +119,25 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
 }
 
-.hero > h2 {
-  padding-top: 8rem;
-  padding-bottom: 2rem;
-  font-size: 3rem;
+.hero h3 {
+  padding: 5rem;
 }
 
-.hero > p {
-  font-size: 1.5rem;
-  padding-bottom: 20rem;
-}
-
-.hero > button {
-  border-radius: 1.2rem;
-  padding: 0.7rem 1rem;
-  color: white;
-  background: rgba(76, 75, 49, 0.8);
-  border: none;
-}
-
-.hero > button:hover {
-  padding: 1rem 2rem;
-}
-
-.hero > hr {
-  width: 4rem;
-  margin-bottom: 1rem;
-  border-color: black;
+@media only screen and (max-width: 932px) {
+  nav {
+    text-align: center;
+  }
+  nav #logo {
+    padding-bottom: 1rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

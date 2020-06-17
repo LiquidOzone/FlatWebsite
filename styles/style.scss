@@ -1,87 +1,112 @@
-*{
-    margin:0;
-    padding:0;
+/* Global Styles */
+
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-}
-html{
-    font-size:62.5%;
-}
-a{
-    text-decoration: none;
+  }
+  html {
+    font-size: 62.5%;
+  }
+  
+  body {
+    font-family: "Quicksand", sans-serif;
+  }
+  
+  h1 {
+    font-size: 2.6rem;
+  }
+  li,
+  button,
+  label,
+  input,
+  p {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 4.8rem;
+  }
+  h3 {
+    font-size: 3rem;
+    font-weight: normal;
+  }
+  h4,
+  h5 {
+    font-size: 2.8rem;
+  }
+  a {
     color:black;
-}
-li{
-    list-style: none;
-}
-body{
-    font-family: 'Quicksand', sans-serif;
-}
-// NAVIGATION
-
-nav{
-    padding:2rem 0rem;
+    text-decoration: none;
+  }
+  button {
+      border-radius: 2rem;
+    padding: 2rem 6rem;
+    background:rgba(76, 75, 49,0.87);
+    border: none;
+    color: white;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background 0.5s ease-in-out;
+  }
+  
+  
+  /* Nav Section With HERO */
+  
+  .main-head {
+    background:rgb(184, 143, 126) ;
     
-    width: 100%;
+    position: sticky;
+    top: 0px;
+    z-index: 3;
+  }
+  nav {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding: 2rem;
     min-height: 10vh;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  nav ul {
     display: flex;
-}
-nav>ul,#logo{
-    display: flex;
-}
-nav>ul{
     flex: 1 1 40rem;
-    justify-content: space-between;
-    padding-right: 9rem;
-    font-size:1.3rem;
-}
-nav>#logo{
-    flex:2 1 40rem;
-    padding-left: 9rem;
-    font-family: 'Pacifico', cursive;
-    font-size: 1.5rem;
-}
-
-
-// HERO
-
-main{
-    background: url("/liana-mikah-L5cEmk3ucYY-unsplash.jpg") no-repeat center center fixed;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+  }
+  #logo {
+    flex: 2 1 40rem;
+    font-family: "Pacifico", sans-serif;
+    font-weight: 400;
+  }
+  
+  .hero {
+    min-height: 90vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), transparent),
+      url("/liana-mikah-L5cEmk3ucYY-unsplash.jpg");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
-    min-height: 100vh;
-}
-.hero{
-    min-height:90vh;
-}
-.hero{
+    color: white;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
     align-items: center;
-}
-.hero>h2{
-    padding-top: 8rem;
-    padding-bottom: 2rem;
-    font-size:3rem;
-}
-.hero>p{
-    font-size: 1.5rem;
-    padding-bottom: 20rem;
-}
-.hero>button{
-    border-radius: 1.2rem;
-    padding: 0.7rem 1rem;
-    color:white;
-    background:rgba(76, 75, 49,0.8);
-    border:none;
-    &:hover{
-        padding: 1rem 2rem;
-    }
-}
+    text-align: center;
+  }
+  .hero h3 {
+    padding: 5rem;
+  }
+//   MEDIA-QUERIES
 
-.hero>hr{
-    width:4rem;
-    margin-bottom: 1rem;
-    border-color:black;
-   
-}
+
+@media only screen and (max-width:932px){
+    nav{
+        text-align:center;
+        #logo{
+            padding-bottom: 1rem;
+        }
+    }
+} 
